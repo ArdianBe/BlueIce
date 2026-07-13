@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="theme-color" content="#0c0a0f"/>
+<title>Blue Ice Köln – Shisha Lounge & Bar</title>
+<meta name="description" content="Blue Ice Shisha Lounge in Köln, Eigelstein 122 — Premium Shisha, Cocktails, Longdrinks & mehr. Öffnungszeiten, Karte & Standort."/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+
+<div class="bg-atmo"></div>
+<div class="bg-pattern"></div>
+<div class="smoke-wrap"><div class="smoke"></div><div class="smoke"></div><div class="smoke"></div></div>
+
+<nav class="navbar">
+  <div class="nav-brand">BLUE <span>ICE</span></div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#start" onclick="closeNav()">Start</a></li>
+    <li><a href="#karte" onclick="closeNav()">Karte</a></li>
+    <li><a href="#ambiente" onclick="closeNav()">Ambiente</a></li>
+    <li><a href="#standort" onclick="closeNav()">Standort</a></li>
+  </ul>
+  <button class="nav-toggle" onclick="toggleNav()" aria-label="Menü">☰</button>
+</nav>
+
+<section class="hero" id="start">
+  <span class="ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+  <div class="logo-emblem">
+    <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M16 4 C16 4 14 6 14 9 C14 11.5 15.5 13 16 14" stroke="#c9a06a" stroke-width="1.2" stroke-linecap="round"/>
+      <path d="M16 4 C16 4 18 6 18 9 C18 11.5 16.5 13 16 14" stroke="#c9a06a" stroke-width="1.2" stroke-linecap="round"/>
+      <rect x="13" y="14" width="6" height="4" rx="1" fill="rgba(180,145,80,0.2)" stroke="#c9a06a" stroke-width="1"/>
+      <path d="M16 18 L16 22" stroke="#c9a06a" stroke-width="1.2"/>
+      <ellipse cx="16" cy="23" rx="5" ry="2.5" fill="rgba(74,158,214,0.15)" stroke="#4a9ed6" stroke-width="1"/>
+      <path d="M11 23 C9 23 8 24.5 8 26 L8 28" stroke="#c9a06a" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="8" cy="28.5" r="1.2" fill="#c9a06a" opacity=".5"/>
+      <path d="M21 23 C23 23 24 24.5 24 26 L24 28" stroke="#c9a06a" stroke-width="1" stroke-linecap="round"/>
+      <circle cx="24" cy="28.5" r="1.2" fill="#c9a06a" opacity=".5"/>
+      <path d="M14 3 C13.5 1.5 14.5 1 14 0" stroke="#4a9ed6" stroke-width=".8" stroke-linecap="round" opacity=".5"/>
+      <path d="M16 2 C15.5 1 16.5 .5 16 0" stroke="#4a9ed6" stroke-width=".8" stroke-linecap="round" opacity=".4"/>
+      <path d="M18 3 C18.5 1.5 17.5 1 18 0" stroke="#4a9ed6" stroke-width=".8" stroke-linecap="round" opacity=".5"/>
+    </svg>
+  </div>
+  <div class="hero-title">BLUE <span>ICE</span></div>
+  <div class="hero-sub">Shisha Lounge · Köln</div>
+  <p class="hero-tagline">Premium Tabak, handgemachte Cocktails und kölscher Charme mitten am Eigelstein.</p>
+  <div class="header-ornament"><div class="h-line"></div><div class="h-diamond"></div><div class="h-line r"></div></div>
+  <div class="hero-cta">
+    <a href="#karte" class="btn btn-primary">Zur Karte</a>
+    <a href="#standort" class="btn btn-outline">Standort & Öffnungszeiten</a>
+  </div>
+  <div class="scroll-hint">Entdecken</div>
+</section>
+
+<section id="karte" class="section-shell">
+  <div class="section-head">
+    <div class="cat-title-wrap"><div class="cat-ornament-line"></div><span class="cat-title">Unsere Karte</span><div class="cat-ornament-line r"></div></div>
+    <span class="cat-sub-label">Shisha · Drinks · Snacks</span>
+  </div>
+
+  <div class="menu-wrapper">
+    <div class="tabs">
+      <button class="tab-btn active" onclick="showTab('shisha',this)">Shisha</button>
+      <button class="tab-btn" onclick="showTab('softdrinks',this)">Softdrinks</button>
+      <button class="tab-btn" onclick="showTab('saefte',this)">Säfte</button>
+      <button class="tab-btn" onclick="showTab('cocktails',this)">Cocktails</button>
+      <button class="tab-btn" onclick="showTab('longdrinks',this)">Longdrinks</button>
+      <button class="tab-btn" onclick="showTab('spirituosen',this)">Spirituosen</button>
+      <button class="tab-btn" onclick="showTab('bier',this)">Bier</button>
+      <button class="tab-btn" onclick="showTab('kaffee',this)">Kaffee & Tee</button>
+      <button class="tab-btn" onclick="showTab('snacks',this)">Snacks</button>
+      <button class="tab-btn" onclick="showTab('info',this)">Info</button>
+    </div>
+
+    <!-- SHISHA -->
+    <div id="shisha" class="menu-section visible">
+      <div class="shisha-list">
+        <div class="shisha-card">
+          <div class="drink-info"><div class="drink-name">Traditionelle Shisha's</div><span class="shisha-tag trad">Traditionell</span></div>
+          <div class="drink-right"><div class="drink-price">12,00 €</div></div>
+        </div>
+        <div class="shisha-card">
+          <div class="drink-info"><div class="drink-name">Fruchtige Shisha's</div><span class="shisha-tag frucht">Fruchtig</span></div>
+          <div class="drink-right"><div class="drink-price">14,00 €</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SÄFTE -->
+    <div id="saefte" class="menu-section">
+      <div class="disclaimer">Alle Säfte sind auch als <span>Schorle</span> erhältlich — einfach beim Bestellen ansagen.</div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Orangensaft</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Ananassaft</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Maracujasaft</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bananensaft</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Kirschsaft</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Cranberrysaft</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Kiba</div><div class="drink-desc">Kirsch & Banane</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+      </div>
+    </div>
+
+    <!-- COCKTAILS -->
+    <div id="cocktails" class="menu-section">
+      <div class="price-badge">Alkoholisch &nbsp;— &nbsp;8,00 €</div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Blue Ice Special I ✦</div><div class="drink-desc">Weißer Rum · Orange · Ananas · Zitrone · Blue Curaçao · Malibu</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Blue Ice Special II ✦</div><div class="drink-desc">Haus-Signature-Mix der Blue Ice Bar</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Mai Tai</div><div class="drink-desc">Weißer & Brauner Rum · Triple Sec · Mandelsirup · Limette · Ananas · Cointreau</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Sex on the Beach</div><div class="drink-desc">Wodka · Pfirsichlikör · Orange · Cranberry</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Mojito</div><div class="drink-desc">Havana Club · Limette · Brauner Zucker · Frische Minze · Soda</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Tequila Sunrise</div><div class="drink-desc">Tequila · Orangensaft · Grenadine · Zitrone</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Piña Colada</div><div class="drink-desc">Weißer Rum · Ananas · Kokosnuss · Sahne</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Strawberry Colada</div><div class="drink-desc">Weißer Rum · Ananas · Erdbeersirup · Kokosnuss · Sahne</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Long Island Ice Tea</div><div class="drink-desc">Rum · Wodka · Gin · Tequila · Triple Sec · Limette · Cola</div></div><div class="drink-right"><div class="drink-price">8,00 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Alkoholfrei</div><div class="subcat-line"></div></div>
+      <div class="price-badge">Alkoholfrei &nbsp;— &nbsp;6,00 €</div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Blue Ice Special ✦</div><div class="drink-desc">Orange · Ananas · Zitrone · Blue Curaçao</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Virgin Colada</div><div class="drink-desc">Kokosnusssirup · Ananas · Sahne</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Marco Carpon</div><div class="drink-desc">Cranberry · Orange · Limette · Kokosnusssirup</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Ipanema</div><div class="drink-desc">Limette · Brauner Zucker · Maracuja · Ginger Ale</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Spit Fire</div><div class="drink-desc">Ananas · Orange · Maracuja · Zitrone · Grenadine</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bambula</div><div class="drink-desc">Limette · Brauner Zucker · Ananas · Orange · Maracuja</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">China Town</div><div class="drink-desc">Ginger Ale · Erdbeersirup · Sahne</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Alice</div><div class="drink-desc">Ananas · Orange · Grenadine · Sahne</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+      </div>
+    </div>
+
+    <!-- LONGDRINKS -->
+    <div id="longdrinks" class="menu-section">
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Vodka Red Bull</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Vodka Orange</div></div><div class="drink-right"><div class="drink-price">5,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Vodka Maracuja</div></div><div class="drink-right"><div class="drink-price">5,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jack Daniels Cola</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jägermeister Red Bull</div></div><div class="drink-right"><div class="drink-price">6,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jägermeister Cola</div></div><div class="drink-right"><div class="drink-price">5,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jim Beam Ginger</div></div><div class="drink-right"><div class="drink-price">5,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jim Beam Cola</div></div><div class="drink-right"><div class="drink-price">5,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bacardi Cola</div></div><div class="drink-right"><div class="drink-price">5,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Gin Tonic</div></div><div class="drink-right"><div class="drink-price">5,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Malibu Maracuja</div></div><div class="drink-right"><div class="drink-price">5,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Campari Orange</div></div><div class="drink-right"><div class="drink-price">5,00 €</div></div></div>
+      </div>
+    </div>
+
+    <!-- SPIRITUOSEN -->
+    <div id="spirituosen" class="menu-section">
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Whiskey & Bourbon · 2cl</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Johnny Walker Red</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Johnny Walker Black</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Ballantines</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Chivas Regal</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jim Beam</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jack Daniels</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Hennessy</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Aperitif · 5cl</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Campari</div></div><div class="drink-right"><div class="drink-price">4,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Martini Bianco</div></div><div class="drink-right"><div class="drink-price">4,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Martini Rosé</div></div><div class="drink-right"><div class="drink-price">4,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Martini Rosso</div></div><div class="drink-right"><div class="drink-price">4,00 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Liköre & Shots · 2cl</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Amaretto Disaronno</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Baileys</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bacardi Blanca</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bacardi Oro</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bacardi Razz</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bacardi Superior</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Captain Morgan</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Cointreau</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Grand Marnier</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Havana 3 Años</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Jägermeister</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Kahlúa</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Malibu</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Pott</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Puschkin Red</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Ramazzotti</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Sambuca</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Southern Comfort</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+      </div>
+    </div>
+
+    <!-- BIER -->
+    <div id="bier" class="menu-section">
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Becks</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Becks Pilsner</div></div><div class="drink-right"><div class="drink-price">3,30 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Becks Green Lemon</div></div><div class="drink-right"><div class="drink-price">3,30 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Becks Ice</div></div><div class="drink-right"><div class="drink-price">3,30 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Kölsch</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Reisdorf Kölsch</div></div><div class="drink-right"><div class="drink-price">3,20 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Reisdorf Kölsch Cola</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Weitere</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Heineken</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Desperados Tequila</div></div><div class="drink-right"><div class="drink-price">4,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Radler</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Weizen</div></div><div class="drink-right"><div class="drink-price">3,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bananenweizen</div></div><div class="drink-right"><div class="drink-price">3,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Vitamalz</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+      </div>
+    </div>
+
+    <!-- SOFTDRINKS -->
+    <div id="softdrinks" class="menu-section">
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">0,25 L</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Selters Sprudel</div></div><div class="drink-right"><div class="drink-price">2,70 €</div><div class="drink-vol">0,25 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Selters Naturell</div></div><div class="drink-right"><div class="drink-price">2,70 €</div><div class="drink-vol">0,25 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Red Bull</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,25 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Red Bull Sugar Free</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,25 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Red Bull versch. Sorten</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,25 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Moloko</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,25 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Moloko Zero</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,25 L</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">0,20 L</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Coca Cola</div></div><div class="drink-right"><div class="drink-price">3,00 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Coca Cola Light</div></div><div class="drink-right"><div class="drink-price">3,00 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Fanta</div></div><div class="drink-right"><div class="drink-price">3,00 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Sprite</div></div><div class="drink-right"><div class="drink-price">3,00 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Mezzo Mix</div></div><div class="drink-right"><div class="drink-price">3,00 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Bitter Lemon</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Ginger Ale</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Tonic Water</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Orangina Orange</div></div><div class="drink-right"><div class="drink-price">3,50 €</div><div class="drink-vol">0,20 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Orangina Blutorange</div></div><div class="drink-right"><div class="drink-price">3,50 €</div><div class="drink-vol">0,20 L</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">0,33 L</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Uludag Gazoz</div></div><div class="drink-right"><div class="drink-price">3,50 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Uludag Gazoz Zero</div></div><div class="drink-right"><div class="drink-price">3,50 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Lemon Soda</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Lemon Soda Zero</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Orange Soda</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Orange Soda Zero</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Fanta Exotic</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Fanta Lemon</div></div><div class="drink-right"><div class="drink-price">3,20 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Eistee Zitrone</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Eistee Pfirsich</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Eistee Blaubeere</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Gaffels Fassbrause</div></div><div class="drink-right"><div class="drink-price">3,00 €</div><div class="drink-vol">0,33 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Apfelschorle</div></div><div class="drink-right"><div class="drink-price">3,00 €</div><div class="drink-vol">0,33 L</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">0,50 L</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Powerade Blau</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,50 L</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Powerade Blau Zero</div></div><div class="drink-right"><div class="drink-price">3,80 €</div><div class="drink-vol">0,50 L</div></div></div>
+      </div>
+    </div>
+
+    <!-- KAFFEE -->
+    <div id="kaffee" class="menu-section">
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Espresso</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Espresso</div></div><div class="drink-right"><div class="drink-price">2,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Espresso Doppelt</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Espresso Macchiato</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Kaffee</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Kaffee</div></div><div class="drink-right"><div class="drink-price">2,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Cappuccino</div></div><div class="drink-right"><div class="drink-price">3,30 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Milchkaffee</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Latte Macchiato</div></div><div class="drink-right"><div class="drink-price">3,80 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Heiße Getränke</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Milch heiß oder warm</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Milch mit Honig</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Kakao mit Sahne</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Tee</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Schwarzer Tee</div></div><div class="drink-right"><div class="drink-price">2,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Pfefferminztee</div></div><div class="drink-right"><div class="drink-price">2,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Kamillentee</div></div><div class="drink-right"><div class="drink-price">2,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Apfeltee</div></div><div class="drink-right"><div class="drink-price">2,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Grüner Tee</div></div><div class="drink-right"><div class="drink-price">2,80 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Früchtetee</div></div><div class="drink-right"><div class="drink-price">2,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Frischer Minztee</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+      </div>
+    </div>
+
+    <!-- SNACKS -->
+    <div id="snacks" class="menu-section">
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Nachos</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Nachoteller + 1 Dip</div><div class="drink-desc">Käse oder Salsa</div></div><div class="drink-right"><div class="drink-price">4,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Extra Dip</div></div><div class="drink-right"><div class="drink-price">1,00 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Toast</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Sucuk & Käse Toast</div><div class="drink-desc">1 Stück</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Sucuk & Käse Toast</div><div class="drink-desc">2 Stück</div></div><div class="drink-right"><div class="drink-price">5,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Sucuk Toast</div><div class="drink-desc">1 Stück</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Sucuk Toast</div><div class="drink-desc">2 Stück</div></div><div class="drink-right"><div class="drink-price">5,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Käse Toast</div><div class="drink-desc">1 Stück</div></div><div class="drink-right"><div class="drink-price">3,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Käse Toast</div><div class="drink-desc">2 Stück</div></div><div class="drink-right"><div class="drink-price">5,00 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Popcorn</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Popcorn Süß</div><div class="drink-desc">1 Portion</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Popcorn Salzig</div><div class="drink-desc">1 Portion</div></div><div class="drink-right"><div class="drink-price">3,50 €</div></div></div>
+      </div>
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Weitere</div><div class="subcat-line"></div></div>
+      <div class="drink-list">
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Salzstangen</div><div class="drink-desc">1 Portion</div></div><div class="drink-right"><div class="drink-price">1,00 €</div></div></div>
+        <div class="drink-card"><div class="drink-info"><div class="drink-name">Erdnüsse</div><div class="drink-desc">1 Portion</div></div><div class="drink-right"><div class="drink-price">1,00 €</div></div></div>
+      </div>
+    </div>
+
+    <!-- INFO -->
+    <div id="info" class="menu-section">
+      <div class="subcat"><div class="subcat-line"></div><div class="subcat-name">Kontakt & WLAN</div><div class="subcat-line"></div></div>
+      <div class="info-box">
+        <div class="info-row"><span class="info-key">WLAN</span><span class="info-val">Blue Ice Gastzugang</span></div>
+        <div class="info-row"><span class="info-key">Passwort</span><span class="wifi-pw">123456789</span></div>
+        <div class="info-row"><span class="info-key">Adresse</span><span class="info-val">Eigelstein 122, 50668 Köln</span></div>
+        <div class="info-row"><span class="info-key">Instagram</span><span class="info-val">@blueiceshisha</span></div>
+      </div>
+      <div class="subcat" style="margin-top:28px"><div class="subcat-line"></div><div class="subcat-name">Zusatzstoffe</div><div class="subcat-line"></div></div>
+      <div class="zusatz-grid">
+        <div class="zusatz-item"><span class="zusatz-num">1</span>Farbstoffe</div>
+        <div class="zusatz-item"><span class="zusatz-num">2</span>Koffeinhaltig</div>
+        <div class="zusatz-item"><span class="zusatz-num">3</span>Chininhaltig</div>
+        <div class="zusatz-item"><span class="zusatz-num">4</span>Phenylalaninquelle</div>
+        <div class="zusatz-item"><span class="zusatz-num">5</span>Taurin</div>
+        <div class="zusatz-item"><span class="zusatz-num">6</span>Antioxidationsmittel</div>
+        <div class="zusatz-item"><span class="zusatz-num">7</span>Milcheiweiß</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="ambiente" class="section-shell">
+  <div class="section-head">
+    <div class="cat-title-wrap"><div class="cat-ornament-line"></div><span class="cat-title">Ambiente</span><div class="cat-ornament-line r"></div></div>
+    <span class="cat-sub-label">Wo Köln entspannt</span>
+  </div>
+  <div class="ambiente-grid">
+    <div class="ambiente-art">
+      <div class="emblem">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 4 C16 4 14 6 14 9 C14 11.5 15.5 13 16 14" stroke="#c9a06a" stroke-width="1"/>
+          <path d="M16 4 C16 4 18 6 18 9 C18 11.5 16.5 13 16 14" stroke="#c9a06a" stroke-width="1"/>
+          <rect x="13" y="14" width="6" height="4" rx="1" fill="rgba(180,145,80,0.2)" stroke="#c9a06a" stroke-width="1"/>
+          <path d="M16 18 L16 22" stroke="#c9a06a" stroke-width="1"/>
+          <ellipse cx="16" cy="23" rx="5" ry="2.5" fill="rgba(74,158,214,0.15)" stroke="#4a9ed6" stroke-width="1"/>
+        </svg>
+      </div>
+    </div>
+    <div class="ambiente-text">
+      <p>Am Eigelstein, im Herzen des Kunibertsviertels, verbindet Blue Ice orientalisches Shisha-Flair mit kölscher Gemütlichkeit. Warmes Licht, ruhige Beats und der Duft von Premium-Tabak schaffen den Rahmen für lange Abende mit Freunden.</p>
+      <p>Ob bei einer traditionellen Shisha oder einem handgemachten Cocktail — bei uns nimmst du dir Zeit.</p>
+      <div class="quote">„Ein Ort zum Ankommen, Verweilen und Genießen.“</div>
+    </div>
+  </div>
+</section>
+
+<section id="standort" class="section-shell">
+  <div class="section-head">
+    <div class="cat-title-wrap"><div class="cat-ornament-line"></div><span class="cat-title">Standort & Kontakt</span><div class="cat-ornament-line r"></div></div>
+  </div>
+  <div class="standort-grid">
+    <div>
+      <div class="info-box">
+        <div class="info-row"><span class="info-key">Adresse</span><span class="info-val">Eigelstein 122<br>50668 Köln</span></div>
+        <div class="info-row"><span class="info-key">Telefon</span><span class="info-val"><a href="tel:+4922173291509">0221 73291509</a></span></div>
+        <div class="info-row"><span class="info-key">Instagram</span><span class="info-val">@blueiceshisha</span></div>
+      </div>
+
+      <div class="subcat" style="margin-top:26px"><div class="subcat-line"></div><div class="subcat-name">Öffnungszeiten</div><div class="subcat-line"></div></div>
+      <table class="hours-table">
+        <tr><td>Montag</td><td>15:30 – 01:00</td></tr>
+        <tr><td>Dienstag</td><td>15:30 – 01:00</td></tr>
+        <tr><td>Mittwoch</td><td>15:30 – 01:00</td></tr>
+        <tr><td>Donnerstag</td><td>15:30 – 01:00</td></tr>
+        <tr><td>Freitag</td><td>15:30 – 02:00</td></tr>
+        <tr><td>Samstag</td><td>15:00 – 02:00</td></tr>
+        <tr><td>Sonntag</td><td>15:00 – 01:00</td></tr>
+      </table>
+
+      <div class="contact-actions">
+        <a href="tel:+4922173291509" class="btn btn-primary">Anrufen</a>
+        <a href="https://www.instagram.com/blueiceshisha/" target="_blank" rel="noopener" class="btn btn-outline">Instagram</a>
+      </div>
+    </div>
+
+    <div class="map-frame">
+      <iframe title="Standort Blue Ice Köln" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=Eigelstein+122,+50668+K%C3%B6ln&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-ornament">✦ &nbsp; ✦ &nbsp; ✦</span>
+  © Blue Ice Shisha Lounge Köln<br>
+  Eigelstein 122 · 50668 Köln &nbsp;·&nbsp; Alle Preise inkl. MwSt. &nbsp;·&nbsp; Kein Alkohol an Minderjährige.<br>
+  <a href="#">Datenschutz</a> &nbsp;·&nbsp; <a href="#">Impressum</a>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
